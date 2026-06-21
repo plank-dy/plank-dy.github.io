@@ -1,3 +1,7 @@
 download/**/*.apk filter=lfs diff=lfs merge=lfs -text
-* !text !filter !merge !diff
 *.apk filter=lfs diff=lfs merge=lfs -text
+/110 filter=lfs diff=lfs merge=lfs -text
+/LICENSE filter=lfs diff=lfs merge=lfs -text
+*.md filter=lfs diff=lfs merge=lfs -text
+*.html filter=lfs diff=lfs merge=lfs -text
+* !text !filter !merge !diff
