@@ -1,6 +1,207 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlockEra 方块纪元 - 方块沙盒创造游戏</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Microsoft Yahei", sans-serif;
+        }
+        body {
+            background-color: #2a382c;
+            color: #f0f8e8;
+        }
+        /* 导航栏 */
+        header {
+            background-color: #1f2b20;
+            padding: 16px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 4px solid #73a942;
+        }
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            color: #73a942;
+        }
+        nav a {
+            color: #f0f8e8;
+            text-decoration: none;
+            margin-left: 32px;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+        nav a:hover {
+            color: #73a942;
+        }
+        /* 首屏横幅 */
+        .banner {
+            height: 70vh;
+            background: linear-gradient(rgba(42, 56, 44, 0.7), rgba(42, 56, 44, 0.9)), #4a6d32;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+        }
+        .banner h1 {
+            font-size: 52px;
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+        .banner p {
+            font-size: 20px;
+            max-width: 700px;
+            margin-bottom: 36px;
+            line-height: 1.7;
+        }
+        .btn {
+            padding: 14px 40px;
+            background-color: #73a942;
+            color: white;
+            font-size: 18px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background-color: #8bc055;
+        }
+        /* 通用板块样式 */
+        section {
+            padding: 80px 60px;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 36px;
+            margin-bottom: 60px;
+            color: #73a942;
+        }
+        /* 特色区域 */
+        .feature-wrap {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+        }
+        .feature-card {
+            background-color: #1f2b20;
+            padding: 32px;
+            border-top: 5px solid #73a942;
+        }
+        .feature-card h3 {
+            font-size: 22px;
+            margin-bottom: 16px;
+        }
+        /* 下载区域 */
+        .download-box {
+            max-width: 700px;
+            margin: 0 auto;
+            background: #1f2b20;
+            padding: 40px;
+            text-align: center;
+        }
+        .download-buttons {
+            margin-top: 30px;
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        /* 页脚 */
+        footer {
+            background: #151d16;
+            padding: 40px 60px;
+            text-align: center;
+            border-top: 4px solid #73a942;
+        }
+    </style>
+</head>
 <body>
-<h1>plank 预热中...</h1>
+    <!-- 导航栏 -->
+    <header>
+        <div class="logo">plank</div>
+        <nav>
+            <a href="#home">首页</a>
+            <a href="#feature">游戏特色</a>
+            <a href="#download">下载游戏</a>
+            <a href="#update">更新日志</a>
+            <a href="#community">社区</a>
+        </nav>
+    </header>
+
+    <!-- 首屏 -->
+    <div class="banner" id="home">
+        <h1>自由方块沙盒，创造属于你的世界</h1>
+        <p>plank dev 是一款开放式方块沙盒游戏，在这里你可以自由搭建建筑、探索广阔野外、挑战野外生存，和好友联机共创超大世界，支持自定义模组拓展游戏内容。</p>
+        <a href="#download" class="btn">立即下载</a>
+    </div>
+
+    <!-- 游戏特色 -->
+    <section id="feature">
+        <h2 class="section-title">游戏核心特色</h2>
+        <div class="feature-wrap">
+            <div class="feature-card">
+                <h3>无限创造建造</h3>
+                <p>数百种原创方块，从零搭建城堡、城市、浮空岛屿，无建造限制，释放你的想象力。</p>
+            </div>
+            <div class="feature-card">
+                <h3>开放式生存冒险</h3>
+                <p>探索森林、荒原、山地、地底洞穴，收集资源、制作工具，应对野外原生生物。</p>
+            </div>
+            <div class="feature-card">
+                <h3>多人联机世界</h3>
+                <p>自建服务器，邀请好友一同建造冒险，支持多人同步存档，共同打造大型工程。</p>
+            </div>
+            <div class="feature-card">
+                <h3>自定义模组系统</h3>
+                <p>开放模组编辑器，玩家可自制方块、道具、生物，丰富游戏玩法，社区海量免费模组。</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 下载区域 -->
+    <section id="download" style="background:#232f24;">
+        <h2 class="section-title">游戏下载</h2>
+        <div class="download-box">
+            <h3>V1.3.2</h3>
+            <p style="margin:20px 0;">适配 Windows / Android 平台，免费游玩</p>
+            <div class="download-buttons">
+                <!-- Windows客户端下载链接 -->
+<a class="btn" href="https://xxx.com/game/win_v1.3.2.zip">Windows客户端</a>
+
+<!-- 安卓APK下载链接 -->
+<a class="btn" href="https://github.com/plank-dy/plank-dy.github.io/raw/main/download/plankdev.apk
+">安卓安装包</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 更新日志 -->
+    <section id="update">
+        <h2 class="section-title">最新更新日志</h2>
+        <div style="max-width:800px;margin:0 auto;background:#1f2b20;padding:30px;">
+            <h3>V1.3.2 更新内容</h3>
+            <ul style="margin-top:16px;line-height:1.8;padding-left:20px;">
+                <li>新增32种建筑装饰方块</li>
+                <li>优化多人联机卡顿问题</li>
+                <li>新增地底遗迹探索场景</li>
+                <li>修复大量道具合成BUG</li>
+            </ul>
+        </div>
+    </section>
+
+    <!-- 页脚 -->
+    <footer>
+        <p>© 2026 plank 木板 版权所有</p>
+        <p style="margin-top:12px;font-size:14px;opacity:0.7;">本作品为原创方块沙盒游戏，与Minecraft无任何关联</p>
+    </footer>
 </body>
 </html>
